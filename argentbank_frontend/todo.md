@@ -1,0 +1,5 @@
+- [x] implement signin
+- [x] implement logout
+- [ x? ] link to dashboard on login
+- [ ] protect dashboard when not logged in
+- [ ] be able to edit name
