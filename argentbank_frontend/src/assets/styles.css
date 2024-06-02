@@ -18,6 +18,9 @@ body, #root > div {
   align-items: center;
   gap: 15px;
 }
+.r-header svg {
+  margin-right: 5px;
+}
 
 .display-none {
   display: none;
