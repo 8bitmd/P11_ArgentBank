@@ -27,6 +27,7 @@ export const loginUser = (credentials, navigate, from) => async (dispatch) => {
 
     } catch (error) {
         dispatch(loginFailure({error: error.message}));
+        alert("L'adresse mail ou le mot de passe sont erronés.")
     }
 };
 
