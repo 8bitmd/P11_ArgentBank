@@ -101,7 +101,7 @@ paths:
           description: Invalid Fields
         '500':
           description: Internal Server Error
-  /user/profile/transactions:
+  /user/profile/transactions/user-{account.id}:
     get:
       security:
         - Bearer: []
@@ -110,12 +110,11 @@ paths:
       summary: User Profile API
       description: API for fetching all transactions
       parameters:
-        - in: body
-          name: body
+        - in: path
+          name: account.id
           description: Fetch all transactions
+          type: integer
           required: true
-          schema:
-            $ref: '#/definitions/LoginResponse'
       produces:
         - application/json
       responses:
@@ -125,6 +124,10 @@ paths:
             $ref: '#/definitions/FetchAllTransactions'
         '400':
           description: Invalid Fields
+        '401':
+          description: Expired token
+        '403':
+          description: Forbidden
         '500':
           description: Internal Server Error
   /user/profile/transactions/{id}:
@@ -136,12 +139,11 @@ paths:
       summary: User Profile API
       description: API for fetching a specific transaction
       parameters:
-        - in: body
-          name: body
+        - in: path
+          name: id
           description: Fetch a specific transaction
+          type: integer
           required: true
-          schema:
-            $ref: '#/definitions/FetchTransaction'
       produces:
         - application/json
       responses:
@@ -151,6 +153,10 @@ paths:
             $ref: '#/definitions/TransactionResponse'
         '400':
           description: Invalid Fields
+        '401':
+          description: Expired token
+        '403':
+          description: Forbidden
         '500':
           description: Internal Server Error
   /user/profile/transactions/{id}/category:
@@ -162,12 +168,15 @@ paths:
       summary: User Profile API
       description: API for editing a transaction's category
       parameters:
+        - in: path
+          name: id
+          description: Edit transaction category
+          type: integer
+          required: true
         - in: body
           name: body
-          description: Edit transaction category
+          type: string
           required: true
-          schema:
-            $ref: '#/definitions/EditTransactionCategory'
       produces:
         - application/json
       responses:
@@ -177,6 +186,10 @@ paths:
             $ref: '#/definitions/EditTransactionCategory'
         '400':
           description: Invalid Fields
+        '401':
+          description: Expired token
+        '403':
+          description: Forbidden
         '500':
           description: Internal Server Error
   /user/profile/transactions/{id}/notes:
@@ -188,12 +201,15 @@ paths:
       summary: User Profile API
       description: API for editing a transaction's notes
       parameters:
+        - in: path
+          name: id
+          description: Update user profile attributes
+          type: integer
+          required: true
         - in: body
           name: body
-          description: Update user profile attributes
+          type: string
           required: true
-          schema:
-            $ref: '#/definitions/FetchTransactionNotes'
       produces:
         - application/json
       responses:
@@ -203,6 +219,10 @@ paths:
             $ref: '#/definitions/FetchTransactionNotes'
         '400':
           description: Invalid Fields
+        '401':
+          description: Expired token
+        '403':
+          description: Forbidden
         '500':
           description: Internal Server Error
 securityDefinitions:
@@ -269,16 +289,9 @@ definitions:
         type: string
       transaction-amount:
         type: integer
-  FetchTransaction:
-    type: object
-    properties:
-      transaction-id:
-        type: integer
   TransactionResponse:
     type: object
     properties:
-      transaction-id:
-        type: integer
       transaction-desc:
         type: string
       transaction-amount:
@@ -286,17 +299,6 @@ definitions:
       transaction-category:
         type: string
       transaction-notes:
-        type: string
-  EditTransaction:
-    type: object
-    properties:
-      transaction-id:
-        type: integer
-      transaction-desc:
-        type: string
-      transaction-amount:
-        type: integer
-      transaction-category:
         type: string
   EditTransactionCategory:
     type: object

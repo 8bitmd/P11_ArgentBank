@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="835c8c03-25d4-4293-b7ae-724da9be20c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/User/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/User/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../argentbank_backend/swagger.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../argentbank_backend/swagger.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +58,7 @@
       <workItem from="1717337149530" duration="1383000" />
       <workItem from="1717422054829" duration="398000" />
       <workItem from="1717422974044" duration="2595000" />
-      <workItem from="1717430489803" duration="3394000" />
+      <workItem from="1717430489803" duration="4086000" />
     </task>
     <servers />
   </component>
