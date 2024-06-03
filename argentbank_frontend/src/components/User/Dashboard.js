@@ -1,8 +1,9 @@
 import {AccountCard} from "./AccountCard";
 import store from "../../store";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import { postUsernameChange} from "../../features/authActions";
-import { useDispatch } from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {useNavigate} from "react-router-dom";
 
 export default function Dashboard() {
     const dispatch = useDispatch()
@@ -10,6 +11,14 @@ export default function Dashboard() {
     const firstName = store.getState().auth?.firstName?.payload?.firstName
     const lastName = store.getState().auth?.lastName?.payload?.lastName
     const [isEditFormVisible, setEditFormVisible] = useState(false);
+
+    const isAuthenticated = store.getState().auth.isAuthenticated
+    const navigate = useNavigate();
+    useEffect(() => {
+        if (!isAuthenticated) {
+            navigate("/")
+        }
+    })
 
     function displayEditNameForm() {
         setEditFormVisible(true);

@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="835c8c03-25d4-4293-b7ae-724da9be20c2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/User/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/User/Dashboard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,9 +16,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2hKK5wLDvK3uq9YKyXSS3hRUS2V" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -25,6 +26,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Node.js.App.js.executor": "Run",
+    "Node.js.Header.js.executor": "Run",
+    "Node.js.authActions.js.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/bruno/Desktop/P11_ArgentBank/argentbank_frontend",
@@ -53,6 +57,9 @@
       <option name="presentableId" value="Default" />
       <updated>1717337148512</updated>
       <workItem from="1717337149530" duration="1383000" />
+      <workItem from="1717422054829" duration="398000" />
+      <workItem from="1717422974044" duration="2595000" />
+      <workItem from="1717430489803" duration="3394000" />
     </task>
     <servers />
   </component>
